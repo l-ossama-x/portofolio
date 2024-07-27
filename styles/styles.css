@@ -1,0 +1,75 @@
+:root{
+    direction: rtl;
+}
+body{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    height: auto;
+}
+nav {
+    margin: 5px;
+    padding: 5px ;
+    border-radius: 10px;
+    width: max-content;
+    background: linear-gradient(0,blueviolet,blue);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+nav a{
+    padding: 5px;
+    border-radius: 5px;
+    height: max-content;
+}
+nav a:hover{
+    outline: solid white 1px;
+    outline-offset: -1px;
+    text-decoration: underline;
+}
+main{
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    flex: 1;
+    height: auto;
+    background-color: #eee;
+    overflow-y: auto;
+    border: solid cyan 2px;
+}
+section{
+    height: 100%;
+}
+nav a , nav a:visited{
+    color: white;
+}
+@media ( max-width: 576px ) {
+    body{
+        flex-direction: column;
+    }
+    nav * {
+        height: max-content;
+    }
+    nav{
+        width: auto;
+        height: max-content;
+        overflow: hidden;
+        flex-direction: row;
+        height: 200px;
+    }
+    nav a {
+        flex: 1;
+    }
+    main{
+        height: 100%;
+    }
+    section{
+        height: 100dvh;
+    }
+}
+@media ( max-width: 500px ) {
+    nav > :first-child{
+        display: none;
+    }
+}

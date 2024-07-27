@@ -1,0 +1,61 @@
+/*
+@media ( max-width: 576px ) {} xs
+@media ( min-width: 576px ) and ( max-width: 768px ) {} sm
+@media ( min-width: 768px ) and ( max-width: 992px ) {} md
+@media ( min-width: 992px ) and ( max-width: 1200px ) {} lg
+@media ( min-width: 1200px ) and ( max-width: 1400px ) {} xlg
+@media ( min-width: 1400px ) {} xxlg
+*/
+* , :root , ::before , ::after {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    
+    position: static;
+    padding: 0;
+    margin: 0;
+    
+    width: auto;
+    height: auto;
+    
+    border: none;
+    outline-width: none;
+
+    display: block;
+    
+    text-align: center;
+    text-overflow: ellipsis;
+    text-wrap: wrap;
+    text-decoration: none;
+
+    overflow-x: hidden;
+
+    list-style: none;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    cursor: default;
+}
+[ hidden ] , head , script , style , template , link{ 
+    display: none !important;
+}
+textarea , input:is( [type = 'email'] , [type = 'text'] , [type = 'password'] , [type = 'url'] , [type = 'search'] , [type = 'tel'] , [type = 'datetime'] ){
+    cursor: text
+}
+input:is( [type = 'button'] , [type = 'radio'] , [type = 'checkbox'] ) , a , button , :is( a , button ) :is( * , ::before , ::after ){
+    cursor: pointer
+}
+:is( button , input:is( [type = 'button'] , [type = 'radio'] , [type = 'checkbox'] ) , label ):active{ 
+    color: transparent !important
+}
+:is( button , input:is( [type = 'button'] , [type = 'radio'] , [type = 'checkbox'] ) , label ):hover{ 
+    outline: solid white 1px !important;
+    outline-offset: -1px !important;
+}
+html , body{ 
+    min-height: 100dvh;
+    height: 100dvh;
+    max-height: 100dvh;
+}
+img , image{
+    image-rendering: pixelated
+}
