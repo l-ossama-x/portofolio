@@ -67,6 +67,9 @@ nav a , nav a:visited{
     section{
         height: 100dvh;
     }
+    #particles{
+        display: none;
+    }
 }
 @media ( max-width: 500px ) {
     nav > :first-child{
